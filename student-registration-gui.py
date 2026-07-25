@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 window=tk.Tk()
 window.title("student registration form")
 window.geometry("500x700")
@@ -26,7 +27,7 @@ name_label.grid(row=0, column=0, padx=(0,50))
 
 name_entry=tk.Entry(
     fill_frame,
-    font=("Poppins",14),
+    font=("Poppins",12),
 )
 name_entry.grid(row=0, column=1 )
 
@@ -39,10 +40,22 @@ roll_label.grid(row=1, column=0, padx=(0,50))
 
 roll_entry=tk.Entry(
     fill_frame,
-    font=("Poppins",14)
+    font=("Poppins",12)
 )
 roll_entry.grid(row=1, column=1,)
 
+course_label=tk.Label(
+    fill_frame,
+    text="course:",
+    font=("poppins",14)
+)
+course_label.grid(row=2, column=0, padx=(0,50))
 
+course_menu=ttk.Combobox(
+    fill_frame,
+    font=("poppins",12),
+    values=["BA","BBA","BCA","BTECH"]
+)
+course_menu.grid(row=2,column=1)
 
 window.mainloop()
