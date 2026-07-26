@@ -156,5 +156,22 @@ java_cb=tk.Checkbutton(
 )
 java_cb.grid(row=0,column=3)
 
+address_label=tk.Label(
+    fill_frame,
+    text="Address: ",
+    font=("poppins",14)
+)
+address_label.grid(row=6,column=0,padx=(0,50))
+
+address_txt=tk.Text(
+    fill_frame,
+    font=("poppins",12),
+    width=30,
+    height=4
+)
+address_txt.grid(row=6,column=1)
+
+
+
 
 window.mainloop()
