@@ -73,7 +73,7 @@ course_menu.grid(row=3,column=1)
 
 gender_label=tk.Label(
     fill_frame,
-    text="gender",
+    text="gender: ",
     font=("poppins",14)
 )
 gender_label.grid(row=4, column=0, padx=(0,50))
@@ -108,5 +108,53 @@ others=tk.Radiobutton(
     variable=gender
 )
 others.grid(row=0, column=2)
+
+skill_label=tk.Label(
+    fill_frame,
+    text="skills: ",
+    font=("poppins",14)
+)
+skill_label.grid(row=5,column=0,padx=(0,50))
+
+skill_frame=tk.Frame(
+    fill_frame
+)
+skill_frame.grid(row=5,column=1)
+
+python_var=tk.BooleanVar
+html_var=tk.BooleanVar
+css_var=tk.BooleanVar
+java_var=tk.BooleanVar
+
+python_cb=tk.Checkbutton(
+    skill_frame,
+    text="python",
+    variable=python_var,
+   
+)
+python_cb.grid(row=0,column=0)
+
+html_cb=tk.Checkbutton(
+    skill_frame,
+    text="html",
+    variable=html_var,
+   
+)
+html_cb.grid(row=0,column=1)
+
+css_cb=tk.Checkbutton(
+    skill_frame,
+    text="something something",
+    variable=css_var
+)
+css_cb.grid(row=0,column=2)
+
+java_cb=tk.Checkbutton(
+    skill_frame,
+    text="java",
+    variable=java_var
+)
+java_cb.grid(row=0,column=3)
+
 
 window.mainloop()
