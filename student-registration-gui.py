@@ -44,18 +44,69 @@ roll_entry=tk.Entry(
 )
 roll_entry.grid(row=1, column=1,)
 
+age_label=tk.Label(
+    fill_frame,
+    text="age: ",
+    font=("poppins",14)
+)
+age_label.grid(row=2, column=0, padx=(0,50))
+
+age_entry=tk.Entry(
+    fill_frame,
+    font=("poppins",14)
+)
+age_entry.grid(row=2, column=1)
+
 course_label=tk.Label(
     fill_frame,
     text="course:",
     font=("poppins",14)
 )
-course_label.grid(row=2, column=0, padx=(0,50))
+course_label.grid(row=3, column=0, padx=(0,50))
 
 course_menu=ttk.Combobox(
     fill_frame,
     font=("poppins",12),
     values=["BA","BBA","BCA","BTECH"]
 )
-course_menu.grid(row=2,column=1)
+course_menu.grid(row=3,column=1)
+
+gender_label=tk.Label(
+    fill_frame,
+    text="gender",
+    font=("poppins",14)
+)
+gender_label.grid(row=4, column=0, padx=(0,50))
+
+gender=tk.StringVar()
+
+radbtn_frame=tk.Frame(
+    fill_frame
+)
+radbtn_frame.grid(row=4, column=1)
+
+male=tk.Radiobutton(
+    radbtn_frame,
+    text="male",
+    value="male",
+    variable=gender
+)
+male.grid(row=0, column=0)
+
+female=tk.Radiobutton(
+    radbtn_frame,
+    text="female",
+    value="female",
+    variable=gender
+)
+female.grid(row=0, column=1)
+
+others=tk.Radiobutton(
+    radbtn_frame,
+    text="others",
+    value="others",
+    variable=gender
+)
+others.grid(row=0, column=2)
 
 window.mainloop()
