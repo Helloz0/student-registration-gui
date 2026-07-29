@@ -13,7 +13,8 @@ label=tk.Label(
     bg="pink"
     )
 label.pack(pady=30)
-
+class student_registration:
+    
 def register():
     name=name_entry.get()
     roll=roll_entry.get()
