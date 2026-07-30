@@ -194,13 +194,13 @@ class studentRegistration:
         address=self.address_txt.get("1.0",tk.END)
                                                  
         skills=[]
-        if python_var.get():
+        if self.python_var.get():
             skills.append("python")
-        if html_var.get():
+        if self.html_var.get():
             skills.append("html")
-        if css_var.get():
+        if self.css_var.get():
             skills.append("css")
-        if java_var.get():
+        if self.java_var.get():
             skills.append("java")
 
         print("Name:",name)
@@ -211,15 +211,10 @@ class studentRegistration:
         print("skills:",skills)
         print("Address:",address)
 
-    
-
 window=tk.Tk()
-obj=studentRegistration(window)
-
 window.title("student registration form")
 window.geometry("500x700")
 window.configure(bg="pink")
 
-
-
+obj=studentRegistration(window)
 window.mainloop()
