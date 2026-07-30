@@ -1,8 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 
-class student_registration:
-    def register():
+class studentRegistration:
+
+    def __init__ (self):
+        pass 
+
+    def register(self):
     
         name=name_entry.get()
         roll=roll_entry.get()
@@ -21,13 +25,13 @@ class student_registration:
         if java_var.get():
             skills.append("java")
 
-        return("Name:", name)
-        return("Roll:", roll)
-        return("Age:", age)
-        return("Course:", course)
-        return("Gender:", gnd)
-        return("skills:",skills)
-        return("Address:", address)
+        print("Name:", name)
+        print("Roll:", roll)
+        print("Age:", age)
+        print("Course:", course)
+        print("Gender:", gnd)
+        print("skills:",skills)
+        print("Address:", address)
 
 window=tk.Tk()
 window.title("student registration form")
@@ -208,7 +212,7 @@ register_btn=tk.Button(
     height=3,
     width=10,
     font=(12),
-    command=register
+    command=self.register
 )
 register_btn.pack(pady=20)
 
