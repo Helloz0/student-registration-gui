@@ -1,5 +1,34 @@
 import tkinter as tk
 from tkinter import ttk
+
+class student_registration:
+    def register():
+    
+        name=name_entry.get()
+        roll=roll_entry.get()
+        age=age_entry.get()
+        course=course_menu.get()
+        gnd=gender.get()
+        address=address_txt.get("1.0",tk.END)
+                                                 
+        skills=[]
+        if python_var.get():
+            skills.append("python")
+        if html_var.get():
+            skills.append("html")
+        if css_var.get():
+            skills.append("css")
+        if java_var.get():
+            skills.append("java")
+
+        return("Name:", name)
+        return("Roll:", roll)
+        return("Age:", age)
+        return("Course:", course)
+        return("Gender:", gnd)
+        return("skills:",skills)
+        return("Address:", address)
+
 window=tk.Tk()
 window.title("student registration form")
 window.geometry("500x700")
@@ -13,33 +42,6 @@ label=tk.Label(
     bg="pink"
     )
 label.pack(pady=30)
-class student_registration:
-    
-def register():
-    name=name_entry.get()
-    roll=roll_entry.get()
-    age=age_entry.get()
-    course=course_menu.get()
-    gnd=gender.get()
-    address=address_txt.get("1.0",tk.END)
-
-    skills=[]
-    if python_var.get():
-        skills.append("python")
-    if html_var.get():
-        skills.append("html")
-    if css_var.get():
-        skills.append("css")
-    if java_var.get():
-        skills.append("java")
-
-    return("Name:", name)
-    return("Roll:", roll)
-    return("Age:", age)
-    return("Course:", course)
-    return("Gender:", gnd)
-    return("skills:",skills)
-    return("Address:", address)
 
 fill_frame=tk.Frame(
     window
