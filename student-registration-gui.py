@@ -1,10 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 
 class studentRegistration:
 
     def __init__ (self,window):
-        self.window=window
+        #self.window=window
 
         self.label=tk.Label(
         window,
@@ -185,7 +186,13 @@ class studentRegistration:
         self.register_btn.pack(pady=20)
 
     def register(self):
-    
+        confirm=messagebox.askyesno(
+            "confirmation",
+            "are you sure you want to submit?"
+        )
+        if not confirm:
+            return
+
         name=self.name_entry.get()
         roll=self.roll_entry.get()
         age=self.age_entry.get()
