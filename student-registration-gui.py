@@ -223,6 +223,10 @@ class studentRegistration:
             "registration successful"
         )
 
+        result_window=tk.Toplevel()
+        result_window.title("Student Details")
+        result_window.geometry("450x450")
+
 window=tk.Tk()
 window.title("student registration form")
 window.geometry("500x700")
