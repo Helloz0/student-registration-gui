@@ -220,50 +220,62 @@ class studentRegistration:
         result_window.geometry("450x450")
         result_window.configure(bg="yellow")
 
-        name_label=tk.Label(
+        details_label=tk.Label(
             result_window,
+            text="Details",
+            font=("poppins",14)
+        )
+        details_label.pack(pady=20)
+
+        result_frame=tk.Frame(
+            result_window
+        )
+        result_frame.pack()
+
+        name_label=tk.Label(
+            result_frame,
             text=f"name: {name}",
             font=("poppins",14)
         )
         name_label.pack(padx=(0,50),pady=4)
 
         roll_label=tk.Label(
-            result_window,
+            result_frame,
             text=f"roll: {roll}",
             font=("poppins",14)
         )
         roll_label.pack(padx=(0,50),pady=4)
 
         age_label=tk.Label(
-            result_window,
+            result_frame,
             text=f"age: {age}",
             font=("poppins",14)
         )
         age_label.pack(padx=(0,50),pady=4)
 
         course_label=tk.Label(
-            result_window,
+            result_frame,
             text=f"course: {course}",
             font=("poppins",14)
         )
         course_label.pack(padx=(0,50),pady=4)
 
         gender_label=tk.Label(
-            result_window,
+            result_frame,
             text=f"gender: {gnd}",
             font=("poppins",14)
         )
         gender_label.pack(padx=(0,50),pady=4)
 
         skills_label=tk.Label(
-            result_window,
+            result_frame,
             text=f"skills: {skills}",
             font=("poppins",14)
         )
         skills_label.pack(padx=(0,50),pady=4)
 
         address_label=tk.Label(
-            result_window,
+            result_frame,
             text=f"address: {address}",
             font=("poppins",14)
         )
