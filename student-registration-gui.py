@@ -227,6 +227,55 @@ class studentRegistration:
         result_window.title("Student Details")
         result_window.geometry("450x450")
 
+        name_label=tk.Label(
+            result_window,
+            text=f"name: {name}",
+            font=("poppins",14)
+        )
+        name_label.pack()
+
+        roll_label=tk.Label(
+            result_window,
+            text=f"roll: {roll}",
+            font=("poppins",14)
+        )
+        roll_label.pack()
+
+        age_label=tk.Label(
+            result_window,
+            text=f"age: {age}",
+            font=("poppins",14)
+        )
+        age_label.pack()
+
+        course_label=tk.Label(
+            result_window,
+            text=f"course: {course}",
+            font=("poppins",14)
+        )
+        course_label.pack()
+
+        gender_label=tk.Label(
+            result_window,
+            text=f"gender: {gnd}",
+            font=("poppins",14)
+        )
+        gender_label.pack()
+
+        skills_label=tk.Label(
+            result_window,
+            text=f"skills: {skills}",
+            font=("poppins",14)
+        )
+        skills_label.pack()
+
+        address_label=tk.Label(
+            result_window,
+            text=f"address: {address}",
+            font=("poppins",14)
+        )
+        address_label.pack()
+
 window=tk.Tk()
 window.title("student registration form")
 window.geometry("500x700")
