@@ -199,7 +199,6 @@ class studentRegistration:
         course=self.course_menu.get()
         gnd=self.gender.get()
         address=self.address_txt.get("1.0",tk.END)
-                                                 
         skills=[]
         if self.python_var.get():
             skills.append("python")
@@ -209,6 +208,17 @@ class studentRegistration:
             skills.append("css")
         if self.java_var.get():
             skills.append("java")
+
+        try :
+            age=int(age)
+            if age<16 or age>100:
+                raise ValueError
+        except ValueError:
+            messagebox.showerror(
+                "error",
+                "wrong age"
+            )
+            return
 
         messagebox.showinfo(
             "success",
@@ -223,7 +233,8 @@ class studentRegistration:
         details_label=tk.Label(
             result_window,
             text="Details",
-            font=("poppins",14)
+            font=("poppins",14),
+            bg="yellow"
         )
         details_label.pack(pady=20)
 
@@ -234,49 +245,49 @@ class studentRegistration:
 
         name_label=tk.Label(
             result_frame,
-            text=f"name: {name}",
+            text=f"Name: {name}",
             font=("poppins",14)
         )
         name_label.pack(padx=(0,50),pady=4)
 
         roll_label=tk.Label(
             result_frame,
-            text=f"roll: {roll}",
+            text=f"Roll: {roll}",
             font=("poppins",14)
         )
         roll_label.pack(padx=(0,50),pady=4)
 
         age_label=tk.Label(
             result_frame,
-            text=f"age: {age}",
+            text=f"Age: {age}",
             font=("poppins",14)
         )
         age_label.pack(padx=(0,50),pady=4)
 
         course_label=tk.Label(
             result_frame,
-            text=f"course: {course}",
+            text=f"Course: {course}",
             font=("poppins",14)
         )
         course_label.pack(padx=(0,50),pady=4)
 
         gender_label=tk.Label(
             result_frame,
-            text=f"gender: {gnd}",
+            text=f"Gender: {gnd}",
             font=("poppins",14)
         )
         gender_label.pack(padx=(0,50),pady=4)
 
         skills_label=tk.Label(
             result_frame,
-            text=f"skills: {skills}",
+            text=f"Skills: {skills}",
             font=("poppins",14)
         )
         skills_label.pack(padx=(0,50),pady=4)
 
         address_label=tk.Label(
             result_frame,
-            text=f"address: {address}",
+            text=f"Address:{address}",
             font=("poppins",14)
         )
         address_label.pack(padx=(0,50),pady=4)
