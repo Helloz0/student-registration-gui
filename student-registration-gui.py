@@ -295,7 +295,7 @@ class studentRegistration:
 window=tk.Tk()
 window.title("student registration form")
 window.geometry("500x700")
-window.configure(bg="pink")
+window.configure(bg="yellow")
 
 obj=studentRegistration(window)
 window.mainloop()
