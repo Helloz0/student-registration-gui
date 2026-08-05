@@ -211,8 +211,16 @@ class studentRegistration:
 
         try :
             age=int(age)
+
+        except ValueError:
+            messagebox.showerror(
+                "error",
+                "age must contain numbers only."
+            )
+            return
             if age<16 or age>100:
                 raise ValueError
+            
         except ValueError:
             messagebox.showerror(
                 "error",
@@ -296,6 +304,5 @@ window=tk.Tk()
 window.title("student registration form")
 window.geometry("500x700")
 window.configure(bg="yellow")
-
 obj=studentRegistration(window)
 window.mainloop()
