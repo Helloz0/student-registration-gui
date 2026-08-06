@@ -12,7 +12,7 @@ class studentRegistration:
         text="Student Registration Form",
         font=("Montserrat",19),
         #justify="center"
-        bg="pink"
+        bg="white"
         )
         self.label.pack(pady=30)
 
