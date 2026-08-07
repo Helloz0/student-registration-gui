@@ -10,7 +10,7 @@ class studentRegistration:
         self.label=tk.Label(
         window,
         text="Student Registration Form",
-        font=("Montserrat",19),
+        font=("poppins",19),
         #justify="center"
         bg="white"
         )
