@@ -2,6 +2,9 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
+def dark_mode():
+    window.configure(bg="black")
+
 class studentRegistration:
 
     def __init__ (self,window):
@@ -305,4 +308,12 @@ window.title("student registration form")
 window.geometry("500x700")
 window.configure(bg="yellow")
 obj=studentRegistration(window)
+
+dark_btn=tk.Button(
+    window,
+    text="🌙",
+    command=dark_mode
+)
+dark_btn.place(relx=0.95,rely=0.02,anchor="ne")
+
 window.mainloop()
